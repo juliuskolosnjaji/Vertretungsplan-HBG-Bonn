@@ -10,9 +10,6 @@ defined('_JEXEC') or die; ?>
          <table>
              <tr>
              <th>
-             Datum
-             </th>
-             <th>
              Stunde
              </th>
              <th>
