@@ -27,7 +27,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -35,7 +35,7 @@ class modvertretungenhbghelper
                  -> join('LEFT', $db->quoteName('#__school_teachers','c')  . ' ON ' . $db->quoteName('a.vertretungslehrerid'). ' = ' . $db->quoteName('c.id'))
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),1)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),0)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),1)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),0)" )
 
                 -> order($db->quoteName('c.alias'). ' ASC')
 
@@ -53,7 +53,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -61,7 +61,7 @@ class modvertretungenhbghelper
                  -> join('LEFT', $db->quoteName('#__school_teachers','c')  . ' ON ' . $db->quoteName('a.vertretungslehrerid'). ' = ' . $db->quoteName('c.id'))
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),0)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),-1)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),0)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),-1)" )
                 -> order($db->quoteName('c.alias'). ' ASC')
 
                 -> order($db->quoteName('a.Stunde'). ' ASC');
@@ -79,7 +79,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -88,7 +88,7 @@ class modvertretungenhbghelper
 
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),-1)" . 'AND' .  $db->quoteName('a.datum') . " <= subdate(now(),-2)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),-1)" . 'AND' .  $db->quoteName('a.datum') . " <= subdate(now(),-2)" )
                 -> order($db->quoteName('c.alias'). ' ASC')
 
                 -> order($db->quoteName('a.Stunde'). ' ASC');
@@ -106,7 +106,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -115,7 +115,7 @@ class modvertretungenhbghelper
 
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),-2)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),-3)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),-2)" . 'AND' .  $db->quoteName('a.datum') ." <= subdate(now(),-3)" )
                 -> order($db->quoteName('c.alias'). ' ASC')
 
                 -> order($db->quoteName('a.Stunde'). ' ASC');
@@ -133,7 +133,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -142,7 +142,7 @@ class modvertretungenhbghelper
 
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),-3)" . 'AND' . $db->quoteName('a.datum') . " <= subdate(now(),-4)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),-3)" . 'AND' . $db->quoteName('a.datum') . " <= subdate(now(),-4)" )
                 -> order($db->quoteName('c.alias'). ' ASC')
 
                 -> order($db->quoteName('a.Stunde'). ' ASC');
@@ -159,7 +159,7 @@ class modvertretungenhbghelper
        $query = $db -> getQuery(true);
 
         $query
-               -> select(array ('a.datum','a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
+               -> select(array ('a.stunde','c.alias','a.klasse','a.fach','b.alias','a.raum','a.kommentar'))
                 -> from($db->quoteName ('#__school_vertretung', 'a'))
 
                  -> join('LEFT', $db->quoteName('#__school_teachers','b')  . ' ON ' . $db->quoteName('a.lehrerid'). ' = ' . $db->quoteName('b.id'))
@@ -168,7 +168,7 @@ class modvertretungenhbghelper
 
 
 
-                -> where($db->quoteName('a.datum')." >= subdate(now(),-4)" . 'AND' . $db->quoteName('a.datum') . " <= subdate(now(),-5)" )
+                //-> where($db->quoteName('a.datum')." >= subdate(now(),-4)" . 'AND' . $db->quoteName('a.datum') . " <= subdate(now(),-5)" )
                 -> order($db->quoteName('c.alias'). ' ASC')
 
                 -> order($db->quoteName('a.Stunde'). ' ASC');
